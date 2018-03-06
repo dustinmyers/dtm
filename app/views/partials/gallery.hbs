@@ -1,0 +1,33 @@
+<section class="module">
+
+	{{#if galleries}}
+		{{#each galleries}}
+			<div class="container">
+				<h4 class="font-alt m-t-0 m-b-0">{{fields.title}}</h4>
+				<hr class="divider-w m-t-10 m-b-20">
+
+				<ul id="works-grid" class="works-grid works-grid-masonry works-grid-2 works-hover-w">
+					{{#each fields.images}}
+						<li class="work-item">
+							<a href="#" class="popup">
+								<div class="work-image">
+									<img src="/images/cdn/{{sys.id}}.jpg" alt="">
+								</div>
+								<div class="work-caption">
+									<h3 class="work-title font-alt"></h3>
+									<div class="work-descr font-inc">
+										click to view
+									</div>
+								</div>
+							</a>
+						</li>
+					{{/each}}
+				</ul>
+			</div>
+		{{/each}}
+	{{else}}
+		<!-- else -->
+		<h3 class="text-muted">There are no image galleries yet.</h3>
+	{{/if}}
+	
+</section>

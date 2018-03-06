@@ -1,0 +1,90 @@
+/* ------------------------------------------------------------------
+Project: Semantic
+Place here your custom CSS styles
+------------------------------------------------------------------ */
+
+ul.book-reviews {
+	margin: 1.618em 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.book-reviews li {
+	font-style: italic;
+	margin-bottom: 1em;
+}
+
+ul.book-reviews li .creator {
+	font-style: normal;
+	font-weight: bold;
+}
+
+.centered {
+	margin: 0 auto;
+	position: relative;
+	width: 61.8%;
+	line-height: 320px;
+	color: white;
+	height: 320px;
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	font-size: 1.618em;
+}
+
+#contact input,
+#contact textarea {
+	padding: 1em;
+	margin-bottom: 0.618em;
+	border-radius: 0.618em;
+	border: 1px solid #e0e0e0;
+}
+
+#contact input#contact_name,
+#contact input#contact_email {
+		width: 80%;
+}
+
+
+#contact textarea#contact_body {
+	width: 100%;
+	min-height: 10em;
+}
+
+.sidebar-form .messages {
+	display: none;
+	width: 100%;
+	list-style: none;
+	margin-bottom: 0.618em;
+	padding: 0;
+}
+
+.messages li {
+	border: 1px solid #333;
+	border-radius: 0.618em;
+	padding: 0.382em;
+	margin-bottom: 0.618em;
+}
+
+.messages li.error {
+	border-color: red;
+	color: red;
+}
+
+.messages li.success {
+	border-color: #40FF40;
+	background: #54CC14;
+	color: #fff;
+	text-shadow: 1px 1px 1px #aaa;
+}
+
+.messages li.loading {
+	border: none;
+	color: #777;
+	padding: 0;
+}
+
+.messages li i.fa {
+	margin-right: 0.618em;
+}

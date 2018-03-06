@@ -1,0 +1,37 @@
+option_settings:
+  - namespace: aws:elasticbeanstalk:application:environment
+    option_name: ENV
+    value: production
+  - namespace: aws:elasticbeanstalk:application:environment
+    option_name: BASE_URL
+    value: http://localhost:3001/
+  - namespace: aws:elasticbeanstalk:application:environment
+    option_name: SITE_PORT
+    value: 3001
+  - namespace: aws:elasticbeanstalk:application:environment
+    option_name: CONTENTFUL_SPACE_ID
+    value: w88v3lyxyrc0
+  - namespace: aws:elasticbeanstalk:application:environment
+    option_name: CONTENTFUL_ACCESS_TOKEN
+    value: 7b91f8a8bf4d17d51717d40707aa7a53d7f366334c1373add14a11ed397a603a
+  - namespace: aws:elasticbeanstalk:application:environment
+    option_name: CONTENTFUL_MANAGEMENT_TOKEN
+    value: eb5cc1ddc2bd2ad5fc54f01bb606bf87373e3c92b5fb68cdbd4dd32435451c05
+  - namespace: aws:elasticbeanstalk:application:environment
+    option_name: INSTAGRAM_CLIENT_ID
+    value: 9d1ff1cb741a448c86ab11a72a3048ae
+  - namespace: aws:elasticbeanstalk:application:environment
+    option_name: INSTAGRAM_CLIENT_SECRET
+    value: aeb1fbda21d040f59ce02f1e898b2844
+  - namespace: aws:elasticbeanstalk:application:environment
+    option_name: INSTAGRAM_ACCESS_TOKEN
+    value: 177064968.9d1ff1c.4bd58a626d444ba1bc1e6804ab0f592f
+  - namespace: aws:elasticbeanstalk:application:environment
+    option_name: GMAIL_USER
+    value: admin@davidtomasmartinez.com
+  - namespace: aws:elasticbeanstalk:application:environment
+    option_name: GMAIL_PASSWORD
+    value: UCMJ412_apes
+  - namespace: aws:elasticbeanstalk:application:environment
+    option_name: CONTACT_MAILTO
+    value: timstepp@me.com

@@ -1,0 +1,26 @@
+<div class="wrapper">
+	{{> small-banner
+		title=heroTitle
+		subTitle=heroSubtitle
+		image=heroImage
+		imageCenterY=10
+	}}
+
+	<section class="module p-b-0">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-sm-8 col-sm-offset-2">
+					{{#each publications}}
+						{{> publication-list-item item=this }}
+					{{/each}}
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+</div>

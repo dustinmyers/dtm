@@ -1,0 +1,53 @@
+<div class="col-sm-6 col-md-6 col-lg-6">
+	<div class="post">
+
+		<div class="post-thumbnail" style="background-image: url('/images/cdn/{{item.fields.coverImage}}')">
+			{{#if item.fields.coverImage}}
+			{{else}}
+				<span class="centered">coming soon</span>
+			{{/if}}
+		</div>
+
+		<div class="post-header">
+
+			<h2 class="post-title font-alt">
+				<a href="{{item.fields.link}}">{{item.fields.title}}</a>
+			</h2>
+
+			<div class="post-meta font-inc">
+				{{item.fields.publisher}}
+			</div>
+
+			<div class="post-meta font-inc">
+				{{item.fields.publishDateStr}}
+			</div>
+
+			{{#if item.fields.purchaseLink}}
+				<div class="post-meta font-inc" style="margin-top: 0.618em">
+					<a class="btn btn-success btn-circle" href="{{item.fields.purchaseLink}}">Purchase</a>
+				</div>
+			{{else}}
+				<div class="post-meta font-inc" style="margin-top: 0.618em">
+					<span class="btn btn-info btn-circle">Coming Soon</span>
+				</div>
+			{{/if}}
+		</div>
+
+		<div class="post-entry">
+			<p>{{item.fields.description}}</p>
+		</div>
+
+		{{#if item.fields.reviews}}
+			<hr class="divider-w m-t-10 m-b-20">
+			<h4>Reviews</h4>
+			<ul class="book-reviews">
+			{{#each item.fields.reviews}}
+				<li>
+					{{this.fields.body}}<br/>
+					<span class="creator">- {{this.fields.reviewer}}</span>
+				</li>
+			{{/each}}
+			</ul>
+		{{/if}}
+	</div>
+</div>

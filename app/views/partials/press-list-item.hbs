@@ -1,0 +1,22 @@
+<div class="post">
+
+	<div class="post-header post-header-small">
+
+		<div class="post-icon">
+			<span class="{{item.typeIcon}}"></span>
+		</div>
+
+		<h2 class="post-title font-alt">
+			{{#if item.fields.link}}
+				<a href="{{item.fields.link}}">{{item.fields.title}}</a>
+			{{else}}
+				{{item.fields.title}}
+			{{/if}}
+		</h2>
+
+		<div class="post-meta font-inc">
+			{{item.fields.type}} | {{item.fields.date}}
+		</div>
+	</div>
+
+</div>

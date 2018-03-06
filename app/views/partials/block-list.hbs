@@ -1,0 +1,15 @@
+<section class="module p-b-0">
+
+	<div class="container">
+
+		<div class="row multi-columns-row post-columns">
+			{{#each items}}
+				{{> book-list-item item=this }}
+			{{/each}}
+		</div>
+
+	</div>
+
+</section>
+
+{{> block-list-pagination }}

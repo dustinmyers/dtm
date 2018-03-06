@@ -1,0 +1,31 @@
+<div class="wrapper">
+	{{> small-banner
+					title=heroTitle
+					subTitle=heroSubtitle
+					image=heroImage
+					imageCenterY=10
+	}}
+
+	<section class="module p-b-0">
+
+		<div class="container">
+			<h4 class="font-alt m-t-0 m-b-0">Press Items</h4>
+			<hr class="divider-w m-t-10 m-b-20">
+
+			<div class="row">
+
+				<div class="col-sm-8 col-sm-offset-2">
+					{{#each pressItems}}
+						{{> press-list-item item=this }}
+					{{/each}}
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	{{> gallery }}
+
+</div>

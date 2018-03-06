@@ -1,0 +1,13 @@
+<h3>Contact Form Submission</h3>
+
+<p>
+    {{#if contact_name}}
+        {{contact_name}} ({{contact_email}}) has submitted a message to you.
+    {{else}}
+        {{contact_email}} has submitted a message to you.
+    {{/if}}
+</p>
+
+<p>
+    {{body}}
+</p>
