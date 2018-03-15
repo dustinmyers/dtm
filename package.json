@@ -22,6 +22,8 @@
     "node-sass": "^3.3.2",
     "node-sass-middleware": "^0.9.7",
     "nodemailer": "^3.0.2",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^1.0.0",
     "q": "^1.4.1",
     "require-reload": "^0.2.2",
     "underscore": "^1.8.3"

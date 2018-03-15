@@ -396,7 +396,6 @@
 		};
 
 		$("#contact_submit").bind('click', function(event) {
-			console.log('clicker');
 			removeMessages('contact_form');
 
 			var submission = JSON.stringify({
@@ -432,7 +431,7 @@
 			}).done(function(a, b, c) {
 				console.log(a, b, c);
 				clearInputs('contact_form');
-				displaySuccess();
+				a.responseCode === 534 ? displayError({ message: 'Sorry, something weird happened. Try again later.' }) : displaySuccess();
 			}).fail(function(xhr, status, error) {
 				var err = JSON.parse(xhr.responseJSON);
 				removeMessages('contact_form');
