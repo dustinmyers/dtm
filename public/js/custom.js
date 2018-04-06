@@ -432,7 +432,7 @@
 			}).done(function(a, b, c) {
 				console.log(a, b, c);
 				clearInputs('contact_form');
-				displaySuccess();
+				displayError({ message: 'Uh-oh, something happened. Try again later.'});
 			}).fail(function(xhr, status, error) {
 				var err = JSON.parse(xhr.responseJSON);
 				removeMessages('contact_form');
