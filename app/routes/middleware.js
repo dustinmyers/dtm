@@ -12,7 +12,6 @@
 
 const _ = require('lodash');
 
-
 // /**
 // 	Initialises the standard view locals
 //
