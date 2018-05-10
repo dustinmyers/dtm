@@ -7,7 +7,6 @@ module.exports = (_app) => {
     const publicationKeys = Object.keys(publications);
     const publicationsArray = [];
     publicationKeys.map(key => {
-      console.log(publications[key].fields);
       publications[key].fields.publishDate
         ? publications[key].date = moment(publications[key].fields.publishDate).format('MMM D, YYYY')
         : null;
