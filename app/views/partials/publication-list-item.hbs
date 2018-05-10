@@ -8,14 +8,14 @@
 
 		<h2 class="post-title font-alt">
 			{{#if item.fields.link}}
-				<a href="{{item.fields.title}}">{{item.fields.title}}</a>
+				<a href="{{item.fields.link}}">{{item.fields.title}}</a>
 			{{else}}
 				{{item.fields.title}}
 			{{/if}}
 		</h2>
 
 		<div class="post-meta font-inc">
-			By <a href="#">{{item.fields.publisher}}</a> | {{item.fields.type}} | {{item.fields.publishDate}}
+    By {{item.fields.publisher}} {{#if item.fields.type}}| {{item.fields.type}}{{/if}} {{#if item.date}}| {{item.date}}{{/if}}
 		</div>
 	</div>
 
