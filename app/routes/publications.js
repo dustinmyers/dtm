@@ -1,6 +1,9 @@
 'use strict';
 
 const moment = require('moment');
+const each = require('lodash').each;
+
+const titleize = require('../utils/titleize');
 
 module.exports = (_app) => {
   function getPublicationsByDate(publications) {
@@ -13,7 +16,23 @@ module.exports = (_app) => {
       publicationsArray.push(publications[key]);
     });
 
-    return publicationsArray;
+    const configuredPublications = each(publicationsArray, publication => {
+      publication.fields.type = titleize(publication.fields.type);
+      switch(publication.fields.type) {
+        case 'Journal':
+        case 'Magazine':
+          publication.typeIcon = 'icon-book-open';
+          break;
+        case 'Newspaper':
+          publication.typeIcon = 'icon-newspaper';
+          break;
+        default:
+          publication.typeIcon = 'icon-document';
+          break;
+      }
+    });
+
+    return configuredPublications;
   }
 
 	_app.app.get('/publications', (req, res) => {
