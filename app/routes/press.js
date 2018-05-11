@@ -1,11 +1,13 @@
-//
 'use strict';
 
 const each = require('lodash').each;
 
+const titleize = require('../utils/titleize');
+
 module.exports = (_app) => {
-  function getPressItemIcons(items) {
+  function configureItems(items) {
     each(items, pressItem => {
+      pressItem.fields.type = titleize(pressItem.fields.type);
       switch(pressItem.fields.type) {
         case 'appearance':
           pressItem.typeIcon = 'icon-camera';
@@ -27,7 +29,7 @@ module.exports = (_app) => {
 
 	_app.app.get('/press', (req, res) => {
 		let content = _app.content;
-		let pressItems  = getPressItemIcons(content.entries.pressItem);
+		let pressItems  = configureItems(content.entries.pressItem);
 		let galleries   = content.entries.gallery;
 		let pressPage = content.pages.pressMediaPage;
 		let locals      = res.locals;
